@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10100e">
+  <meta name="description" content="Shop premium watches and gadgets at Bulgary Collections.">
+  <title>Bulgary Collections | Luxury Shopping</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Two-second splash screen -->
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <div class="brand-emblem">B</div>
+      <h1>BULGARY</h1>
+      <p>COLLECTIONS</p>
+      <span class="gold-line"></span>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-mark">B</span>
+      <span>BULGARY <small>COLLECTIONS</small></span>
+    </a>
+    <nav>
+      <a href="#watches">Watches</a>
+      <a href="#gadgets">Gadgets</a>
+      <a href="#rewards">Super Coins</a>
+    </nav>
+    <button class="cart-button" id="open-cart">
+      Bag <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">THE ART OF REFINED LIVING</p>
+      <h1>Luxury is in<br><span>every detail.</span></h1>
+      <p>Timeless watches. Exceptional gadgets. A more elevated everyday.</p>
+      <a class="gold-button" href="#collections">Explore Collections</a>
+    </section>
+
+    <section class="collections" id="collections">
+      <article class="collection-panel watches-panel" id="watches">
+        <div class="panel-copy">
+          <span class="eyebrow">THE TIMELESS EDIT</span>
+          <h2>Watches</h2>
+          <p>Precision meets enduring style.</p>
+          <a href="#watch-products">Discover Watches ↗</a>
+        </div>
+      </article>
+      <article class="collection-panel gadgets-panel" id="gadgets">
+        <div class="panel-copy">
+          <span class="eyebrow">THE MODERN EDIT</span>
+          <h2>Gadgets</h2>
+          <p>Technology, beautifully considered.</p>
+          <a href="#gadget-products">Explore Gadgets ↗</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="product-section" id="watch-products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CRAFTED TO LAST</p>
+          <h2>Signature Watches</h2>
+        </div>
+        <span>01 / COLLECTION</span>
+      </div>
+      <div class="product-grid" id="watch-list"></div>
+    </section>
+
+    <section class="product-section" id="gadget-products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MADE FOR YOUR WORLD</p>
+          <h2>Premium Gadgets</h2>
+        </div>
+        <span>02 / COLLECTION</span>
+      </div>
+      <div class="product-grid" id="gadget-list"></div>
+    </section>
+
+    <section class="rewards" id="rewards">
+      <div class="coin-symbol">✦</div>
+      <p class="eyebrow">THE BULGARY PRIVILEGE</p>
+      <h2>More shopping.<br><span>More rewarding.</span></h2>
+      <p>Unlock a ₹100 Super Coin discount on eligible purchases above ₹2,000.</p>
+      <a href="#watch-products" class="gold-button">Shop & Earn</a>
+      <small>Demo reward terms apply. See checkout for details.</small>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo footer-logo">BULGARY COLLECTIONS</a>
+    <p>Exceptional details. Everyday distinction.</p>
+    <small>© 2026 Bulgary Collections. Demo storefront.</small>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag">
+    <div class="drawer-heading">
+      <h2>Your Shopping Bag</h2>
+      <button class="icon-button" id="close-cart" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-summary">
+      <div class="summary-line"><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div>
+      <p class="muted" id="cart-reward-message">Add products to get started.</p>
+      <button class="gold-button full-width" id="checkout-button">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Checkout -->
+  <div class="checkout-overlay" id="checkout-overlay">
+    <section class="checkout-modal" role="dialog"
+      aria-modal="true" aria-labelledby="checkout-title">
+      <div class="drawer-heading">
+        <div>
+          <p class="eyebrow">SECURE CHECKOUT DEMO</p>
+          <h2 id="checkout-title">Complete Your Order</h2>
+        </div>
+        <button class="icon-button" id="close-checkout"
+          aria-label="Close checkout">✕</button>
+      </div>
+
+      <form id="checkout-form">
+        <h3>1. Delivery Details</h3>
+        <div class="form-grid">
+          <label>Full name
+            <input name="name" required autocomplete="name" placeholder="Your full name">
+          </label>
+          <label>Mobile number
+            <input name="phone" required inputmode="numeric"
+              pattern="[6-9][0-9]{9}" maxlength="10"
+              autocomplete="tel" placeholder="10-digit mobile">
+          </label>
+          <label class="span-two">Email address
+            <input name="email" type="email" required autocomplete="email"
+              placeholder="you@example.com">
+          </label>
+          <label class="span-two">Delivery address
+            <textarea name="address" required rows="3"
+              autocomplete="street-address" placeholder="House, street, city, PIN code"></textarea>
+          </label>
+        </div>
+
+        <h3>2. Payment Method</h3>
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="upi" checked>
+            <span><strong>UPI</strong><small>GPay, PhonePe, Paytm or another UPI app</small></span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="card">
+            <span><strong>Credit / Debit Card</strong><small>Payment gateway required</small></span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="cod">
+            <span><strong>Cash on Delivery</strong><small>Subject to store availability</small></span>
+          </label>
+        </div>
+
+        <div id="upi-details" class="upi-details">
+          <label>UPI ID
+            <input id="upi-id" name="upiId" placeholder="yourname@bank">
+          </label>
+          <p>Merchant UPI: <strong id="merchant-upi-display">REPLACE_WITH_YOUR_UPI_ID</strong></p>
+          <small>Use the merchant's verified UPI ID. This demo does not initiate or verify payments.</small>
+        </div>
+
+        <h3>3. Order Summary</h3>
+        <div id="checkout-items"></div>
+        <div class="summary-line"><span>Subtotal</span><strong id="checkout-subtotal">₹0</strong></div>
+        <div class="summary-line"><span>Super Coin discount</span><strong id="coin-discount">₹0</strong></div>
+        <div class="summary-line"><span>Delivery</span><strong>Free</strong></div>
+        <div class="summary-line total-line"><span>Total payable</span><strong id="checkout-total">₹0</strong></div>
+        <p class="muted" id="checkout-coin-message"></p>
+
+        <button type="submit" class="gold-button full-width" id="place-order">
+          Place Demo Order
+        </button>
+        <p class="form-note">Demo only — no real payment will be collected.</p>
+        <div id="order-message" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
