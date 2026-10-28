@@ -566,7 +566,7 @@ window.addEventListener("load", () => {
   window.setTimeout(() => {
     const splash = $("#splash");
     if (splash) splash.remove();
-  }, 1000);
+  }, 10);
 });
 
 // Start the storefront.
