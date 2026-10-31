@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="THEODORE LUXE — Luxury watches, gadgets, jewellery, fashion and lifestyle.">
+  <title>THEODORE LUXE | Luxury Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">A MORE BEAUTIFUL WAY TO SHOP · FREE SHIPPING ON ORDERS ABOVE ₹1,999</div>
+  <header class="site-header">
+    <button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+    <a class="brand" href="#" aria-label="Theodore Luxe home"><span>THEODORE</span><small>L U X E</small></a>
+    <nav id="mainNav">
+      <a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#story">Our Story</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="accountBtn" title="Account">♙</button>
+      <button class="icon-btn" id="wishlistBtn" title="Wishlist">♡ <span id="wishCount">0</span></button>
+      <button class="icon-btn cart-trigger" id="cartBtn" title="Shopping bag">Bag <span id="cartCount" class="count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE ART OF EVERYDAY LUXURY</p>
+        <h1>Make every<br><em>moment</em> iconic.</h1>
+        <p>Thoughtfully chosen pieces. Timeless style. A world of possibilities, curated for you.</p>
+        <a class="btn btn-gold" href="#shop">DISCOVER THE COLLECTION <span>↗</span></a>
+      </div>
+      <div class="hero-art" aria-label="Decorative luxury product artwork">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="hero-stamp">TL<br><small>EST. 2026</small></div>
+        <div class="hero-caption">THE NEW<br>STANDARD OF<br><strong>EVERYDAY</strong></div>
+      </div>
+      <div class="hero-index">01 / 03</div>
+    </section>
+
+    <section class="benefits">
+      <div><span>✧</span><strong>Curated collections</strong><small>Chosen with intention</small></div>
+      <div><span>◇</span><strong>Secure checkout</strong><small>Demo payment experience</small></div>
+      <div><span>↗</span><strong>Made for everyone</strong><small>Style without boundaries</small></div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE YOUR STYLE</p><h2>Shop by category</h2></div><a href="#shop" class="text-link">VIEW ALL PRODUCTS ↗</a></div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="section products-section" id="shop">
+      <div class="section-heading"><div><p class="eyebrow">THE EDIT</p><h2>Discover the collection</h2><p class="muted">The little details make all the difference.</p></div></div>
+      <div class="shop-tools">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products..."></label>
+        <select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option></select>
+        <select id="categoryFilter" aria-label="Filter by category"><option value="All">All categories</option></select>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state hidden" id="emptyProducts">No products found. Try another search.</p>
+    </section>
+
+    <section class="editorial" id="story">
+      <div class="editorial-art"><div class="editorial-circle">TL</div><span>LESS, BUT<br>EXCEPTIONAL.</span></div>
+      <div class="editorial-copy"><p class="eyebrow">THE THEODORE POINT OF VIEW</p><h2>Luxury is a feeling.<br><em>Make it yours.</em></h2><p>From everyday essentials to statement pieces, THEODORE LUXE brings together style, technology and thoughtful design in one destination.</p><a href="#shop" class="text-link">FIND YOUR NEXT FAVOURITE ↗</a></div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">A LITTLE NOTE FROM US</p><h2>Good things, delivered.</h2><p>Join our list for new arrivals, edits and special offers.</p>
+      <form id="newsletterForm"><input type="email" placeholder="Your email address" required><button class="btn btn-dark">JOIN THE LIST ↗</button></form>
+      <small id="newsletterMessage" aria-live="polite"></small>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-main"><div><a class="brand footer-brand" href="#"><span>THEODORE</span><small>L U X E</small></a><p>Luxury, made part of every day.</p></div><div><strong>EXPLORE</strong><a href="#shop">Shop all</a><a href="#categories">Categories</a><a href="#story">Our story</a></div><div><strong>NEED HELP?</strong><a href="mailto:hello@theodoreluxe.example">Email support</a><a id="whatsappLink" href="#" target="_blank" rel="noopener">WhatsApp support</a><button class="footer-admin" id="adminBtn">Admin dashboard</button></div></div>
+    <div class="footer-bottom"><span>© 2026 THEODORE LUXE. DEMO STORE.</span><span>MADE FOR MODERN LIVING.</span></div>
+  </footer>
+
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="drawer hidden" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head"><h2>Your bag <span id="drawerCount">(0)</span></h2><button class="close-btn" data-close>×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="coupon-row"><input id="couponInput" placeholder="Coupon code"><button id="applyCoupon" class="btn btn-outline">APPLY</button></div>
+    <p id="couponMessage" class="tiny-message"></p>
+    <div class="cart-summary"><div><span>Subtotal</span><strong id="subtotal">₹0</strong></div><div><span>Discount</span><strong id="discount">−₹0</strong></div><div><span>Shipping</span><strong id="shipping">₹0</strong></div><div class="total"><span>Total</span><strong id="total">₹0</strong></div></div>
+    <button class="btn btn-gold full" id="checkoutBtn">PROCEED TO CHECKOUT ↗</button>
+  </aside>
+
+  <section class="modal hidden" id="accountModal" role="dialog" aria-modal="true">
+    <button class="close-btn modal-close" data-close>×</button><p class="eyebrow">WELCOME TO THEODORE</p><h2 id="accountTitle">Your account</h2>
+    <div class="tabs"><button class="active" id="loginTab">LOGIN</button><button id="registerTab">REGISTER</button></div>
+    <form id="accountForm"><input id="accountName" class="hidden" placeholder="Full name"><input id="accountEmail" type="email" placeholder="Email address" required><input id="accountPassword" type="password" placeholder="Password (min. 6 characters)" minlength="6" required><button class="btn btn-dark full" id="accountSubmit">LOGIN</button></form>
+    <p id="accountMessage" class="tiny-message"></p><button id="logoutBtn" class="text-link hidden">LOG OUT</button>
+    <p class="demo-note">Demo only: account information stays in this browser. Do not use a real password.</p>
+  </section>
+
+  <section class="modal wide-modal hidden" id="checkoutModal" role="dialog" aria-modal="true">
+    <button class="close-btn modal-close" data-close>×</button><p class="eyebrow">ALMOST YOURS</p><h2>Checkout</h2>
+    <form id="checkoutForm" class="checkout-grid">
+      <div class="checkout-fields"><h3>Delivery details</h3><input id="customerName" placeholder="Full name" required><input id="customerEmail" type="email" placeholder="Email address" required><input id="customerPhone" type="tel" placeholder="Mobile number" pattern="[0-9]{10}" title="Enter a 10-digit mobile number" required><textarea id="customerAddress" placeholder="Full delivery address" required></textarea><div class="two-inputs"><input id="customerCity" placeholder="City" required><input id="customerPin" inputmode="numeric" placeholder="PIN code" pattern="[0-9]{6}" required></div><h3>Payment method</h3><label class="payment-option"><input type="radio" name="payment" value="UPI" checked> UPI (demo)</label><label class="payment-option"><input type="radio" name="payment" value="Card"> Credit / debit card (demo)</label><label class="payment-option"><input type="radio" name="payment" value="COD"> Cash on delivery</label><p class="demo-note">No money is collected. This checkout creates a local demo order only.</p></div>
+      <div class="checkout-summary"><h3>Order summary</h3><div id="checkoutLines"></div><div class="total checkout-total"><span>Total</span><strong id="checkoutTotal">₹0</strong></div><button class="btn btn-gold full" type="submit">PLACE DEMO ORDER ↗</button></div>
+    </form>
+    <p id="checkoutMessage" class="tiny-message"></p>
+  </section>
+
+  <section class="modal wide-modal hidden" id="adminModal" role="dialog" aria-modal="true">
+    <button class="close-btn modal-close" data-close>×</button><p class="eyebrow">STORE MANAGEMENT</p><h2>Admin dashboard</h2>
+    <div id="adminLoginPanel"><p class="muted">Sign in to manage your demo store.</p><form id="adminLoginForm" class="admin-login"><input id="adminUser" placeholder="Username" required><input id="adminPass" type="password" placeholder="Password" required><button class="btn btn-dark">ADMIN LOGIN</button></form><p class="demo-note">Demo credentials: admin / Luxe@2026</p><p id="adminLoginMessage" class="tiny-message"></p></div>
+    <div id="adminPanel" class="hidden">
+      <div class="admin-stats" id="adminStats"></div>
+      <div class="admin-tabs"><button class="active" data-admin-tab="products">PRODUCTS</button><button data-admin-tab="orders">ORDERS</button><button data-admin-tab="coupons">COUPONS</button><button data-admin-tab="users">USERS</button></div>
+      <div id="adminContent"></div><button class="btn btn-outline" id="adminLogout">LOG OUT OF ADMIN</button>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
