@@ -3,289 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#10100e">
-  <meta name="description" content="Shop premium watches and gadgets at Bulgary Collections.">
-  <title>Bulgary Collections | Luxury Shopping</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <!-- Two-second splash screen -->
-  <div id="splash" class="splash">
-    <div class="splash-content">
-      <div class="brand-emblem">B</div>
-      <h1>BULGARY</h1>
-      <p>COLLECTIONS</p>
-      <span class="gold-line"></span>
-    </div>
-  </div>
-  <header class="navbar">
-    <a href="#" class="logo">
-      <span class="logo-mark">B</span>
-      <span>BULGARY <small>COLLECTIONS</small></span>
-    </a>
-    <nav>
-      <a href="#watches">Watches</a>
-      <a href="#gadgets">Gadgets</a>
-      <a href="#rewards">Super Coins</a>
-    </nav>
-    <button class="cart-button" id="open-cart">
-      Bag <span id="cart-count">0</span>
-    </button>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0b0b">
-  <title>Bulgary Collections | Objects of Desire</title>
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="THEODORE LUXE — Luxury watches, gadgets, jewellery, fashion and lifestyle.">
+  <title>THEODORE LUXE | Luxury Shopping</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="splash" class="splash" aria-label="Bulgary Collections loading">
-    <div class="splash-mark">B<span>✦</span></div>
-    <p class="splash-name">BULGARY COLLECTIONS</p>
-    <p class="splash-tag">OBJECTS OF DESIRE</p>
-    <div class="splash-line"></div>
-  </div>
+  <div class="announcement">A MORE BEAUTIFUL WAY TO SHOP · FREE SHIPPING ON ORDERS ABOVE ₹1,999</div>
   <header class="site-header">
-    <a class="wordmark" href="#" aria-label="Bulgary Collections home"><span class="brand-symbol">B</span><span>BULGARY <small>COLLECTIONS</small></span></a>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="#collections">Collections</a><a href="#story">Our Story</a><a href="#benefits">Privileges</a>
+    <button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+    <a class="brand" href="#" aria-label="Theodore Luxe home"><span>THEODORE</span><small>L U X E</small></a>
+    <nav id="mainNav">
+      <a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#story">Our Story</a><a href="#contact">Contact</a>
     </nav>
-    <button class="cart-trigger" id="open-cart" aria-label="Open shopping cart">Bag <span id="cart-count">0</span></button>
+    <div class="header-actions">
+      <button class="icon-btn" id="accountBtn" title="Account">♙</button>
+      <button class="icon-btn" id="wishlistBtn" title="Wishlist">♡ <span id="wishCount">0</span></button>
+      <button class="icon-btn cart-trigger" id="cartBtn" title="Shopping bag">Bag <span id="cartCount" class="count">0</span></button>
+    </div>
   </header>
+
   <main>
     <section class="hero">
-      <p class="eyebrow">THE ART OF REFINED LIVING</p>
-      <h1>Luxury is in<br><span>every detail.</span></h1>
-      <p>Timeless watches. Exceptional gadgets. A more elevated everyday.</p>
-      <a class="gold-button" href="#collections">Explore Collections</a>
-    </section>
-    <section class="collections" id="collections">
-      <article class="collection-panel watches-panel" id="watches">
-        <div class="panel-copy">
-          <span class="eyebrow">THE TIMELESS EDIT</span>
-          <h2>Watches</h2>
-          <p>Precision meets enduring style.</p>
-          <a href="#watch-products">Discover Watches ↗</a>
-        </div>
-      </article>
-      <article class="collection-panel gadgets-panel" id="gadgets">
-        <div class="panel-copy">
-          <span class="eyebrow">THE MODERN EDIT</span>
-          <h2>Gadgets</h2>
-          <p>Technology, beautifully considered.</p>
-          <a href="#gadget-products">Explore Gadgets ↗</a>
-        </div>
-      </article>
-    </section>
-    <section class="product-section" id="watch-products">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">CRAFTED TO LAST</p>
-          <h2>Signature Watches</h2>
-        </div>
-        <span>01 / COLLECTION</span>
-      </div>
-      <div class="product-grid" id="watch-list"></div>
-    </section>
-    <section class="product-section" id="gadget-products">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">MADE FOR YOUR WORLD</p>
-          <h2>Premium Gadgets</h2>
-        </div>
-        <span>02 / COLLECTION</span>
-      </div>
-      <div class="product-grid" id="gadget-list"></div>
-    </section>
-    <section class="rewards" id="rewards">
-      <div class="coin-symbol">✦</div>
-      <p class="eyebrow">THE BULGARY PRIVILEGE</p>
-      <h2>More shopping.<br><span>More rewarding.</span></h2>
-      <p>Unlock a ₹100 Super Coin discount on eligible purchases above ₹2,000.</p>
-      <a href="#watch-products" class="gold-button">Shop & Earn</a>
-      <small>Demo reward terms apply. See checkout for details.</small>
-    </section>
-  </main>
-  <footer>
-    <a href="#" class="logo footer-logo">BULGARY COLLECTIONS</a>
-    <p>Exceptional details. Everyday distinction.</p>
-    <small>© 2026 Bulgary Collections. Demo storefront.</small>
-  </footer>
-  <!-- Cart drawer -->
-  <div class="overlay" id="cart-overlay"></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag">
-    <div class="drawer-heading">
-      <h2>Your Shopping Bag</h2>
-      <button class="icon-button" id="close-cart" aria-label="Close cart">✕</button>
-    </div>
-    <div id="cart-items"></div>
-    <div class="cart-summary">
-      <div class="summary-line"><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div>
-      <p class="muted" id="cart-reward-message">Add products to get started.</p>
-      <button class="gold-button full-width" id="checkout-button">Proceed to Checkout</button>
-    </div>
-  </aside>
-  <!-- Checkout -->
-  <div class="checkout-overlay" id="checkout-overlay">
-    <section class="checkout-modal" role="dialog"
-      aria-modal="true" aria-labelledby="checkout-title">
-      <div class="drawer-heading">
-        <div>
-          <p class="eyebrow">SECURE CHECKOUT DEMO</p>
-          <h2 id="checkout-title">Complete Your Order</h2>
-        </div>
-        <button class="icon-button" id="close-checkout"
-          aria-label="Close checkout">✕</button>
-      </div>
-      <form id="checkout-form">
-        <h3>1. Delivery Details</h3>
-        <div class="form-grid">
-          <label>Full name
-            <input name="name" required autocomplete="name" placeholder="Your full name">
-          </label>
-          <label>Mobile number
-            <input name="phone" required inputmode="numeric"
-              pattern="[6-9][0-9]{9}" maxlength="10"
-              autocomplete="tel" placeholder="10-digit mobile">
-          </label>
-          <label class="span-two">Email address
-            <input name="email" type="email" required autocomplete="email"
-              placeholder="you@example.com">
-          </label>
-          <label class="span-two">Delivery address
-            <textarea name="address" required rows="3"
-              autocomplete="street-address" placeholder="House, street, city, PIN code"></textarea>
-          </label>
-        </div>
-        <h3>2. Payment Method</h3>
-        <div class="payment-options">
-          <label class="payment-option">
-            <input type="radio" name="payment" value="upi" checked>
-            <span><strong>UPI</strong><small>GPay, PhonePe, Paytm or another UPI app</small></span>
-          </label>
-          <label class="payment-option">
-            <input type="radio" name="payment" value="card">
-            <span><strong>Credit / Debit Card</strong><small>Payment gateway required</small></span>
-          </label>
-          <label class="payment-option">
-            <input type="radio" name="payment" value="cod">
-            <span><strong>Cash on Delivery</strong><small>Subject to store availability</small></span>
-          </label>
-        </div>
-        <div id="upi-details" class="upi-details">
-          <label>UPI ID
-            <input id="upi-id" name="upiId" placeholder="yourname@bank">
-          </label>
-          <p>Merchant UPI: <strong id="merchant-upi-display">REPLACE_WITH_YOUR_UPI_ID</strong></p>
-          <small>Use the merchant's verified UPI ID. This demo does not initiate or verify payments.</small>
-        </div>
-        <h3>3. Order Summary</h3>
-        <div id="checkout-items"></div>
-        <div class="summary-line"><span>Subtotal</span><strong id="checkout-subtotal">₹0</strong></div>
-        <div class="summary-line"><span>Super Coin discount</span><strong id="coin-discount">₹0</strong></div>
-        <div class="summary-line"><span>Delivery</span><strong>Free</strong></div>
-        <div class="summary-line total-line"><span>Total payable</span><strong id="checkout-total">₹0</strong></div>
-        <p class="muted" id="checkout-coin-message"></p>
-        <button type="submit" class="gold-button full-width" id="place-order">
-          Place Demo Order
-        </button>
-        <p class="form-note">Demo only — no real payment will be collected.</p>
-        <div id="order-message" role="status" aria-live="polite"></div>
-      </form>
-    </section>
-  </div>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
       <div class="hero-copy">
         <p class="eyebrow">THE ART OF EVERYDAY LUXURY</p>
-        <h1>Make every<br><em>moment</em> matter.</h1>
-        <p class="hero-description">Considered timepieces. Intelligent essentials. A collection chosen for the way you live.</p>
-        <a class="button button-gold" href="#collections">Explore the collection <span>↗</span></a>
+        <h1>Make every<br><em>moment</em> iconic.</h1>
+        <p>Thoughtfully chosen pieces. Timeless style. A world of possibilities, curated for you.</p>
+        <a class="btn btn-gold" href="#shop">DISCOVER THE COLLECTION <span>↗</span></a>
       </div>
-      <div class="hero-art">
-        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=85" alt="Minimal luxury wristwatch on a warm neutral background">
-        <div class="hero-caption"><span>01 / SIGNATURE PIECES</span><span>DESIGNED TO LAST</span></div>
+      <div class="hero-art" aria-label="Decorative luxury product artwork">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="hero-stamp">TL<br><small>EST. 2026</small></div>
+        <div class="hero-caption">THE NEW<br>STANDARD OF<br><strong>EVERYDAY</strong></div>
       </div>
+      <div class="hero-index">01 / 03</div>
     </section>
-    <section class="collection-section" id="collections">
-      <div class="section-heading">
-        <p class="eyebrow">CURATED FOR YOU</p><h2>Two worlds. <em>One point of view.</em></h2>
-        <p>Discover pieces that express your own definition of exceptional.</p>
+
+    <section class="benefits">
+      <div><span>✧</span><strong>Curated collections</strong><small>Chosen with intention</small></div>
+      <div><span>◇</span><strong>Secure checkout</strong><small>Demo payment experience</small></div>
+      <div><span>↗</span><strong>Made for everyone</strong><small>Style without boundaries</small></div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE YOUR STYLE</p><h2>Shop by category</h2></div><a href="#shop" class="text-link">VIEW ALL PRODUCTS ↗</a></div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="section products-section" id="shop">
+      <div class="section-heading"><div><p class="eyebrow">THE EDIT</p><h2>Discover the collection</h2><p class="muted">The little details make all the difference.</p></div></div>
+      <div class="shop-tools">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products..."></label>
+        <select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option></select>
+        <select id="categoryFilter" aria-label="Filter by category"><option value="All">All categories</option></select>
       </div>
-      <div class="split-collections">
-        <a class="collection-tile watches-tile" href="#watch-products">
-          <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=1200&q=85" alt="Classic wristwatch">
-          <div class="tile-overlay"><span class="eyebrow">THE TIMEPIECE EDIT</span><h3>Watches</h3><span class="tile-link">Explore watches ↗</span></div>
-        </a>
-        <a class="collection-tile gadgets-tile" href="#gadget-products">
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=85" alt="Premium wireless headphones">
-          <div class="tile-overlay"><span class="eyebrow">THE MODERN ESSENTIALS</span><h3>Gadgets</h3><span class="tile-link">Explore gadgets ↗</span></div>
-        </a>
-      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state hidden" id="emptyProducts">No products found. Try another search.</p>
     </section>
-    <section class="products-section" id="watch-products">
-      <div class="products-heading"><div><p class="eyebrow">01 — THE TIMEPIECE EDIT</p><h2>Watches</h2></div><p>Quiet confidence, down to the last detail.</p></div>
-      <div class="product-grid" id="watch-grid"></div>
+
+    <section class="editorial" id="story">
+      <div class="editorial-art"><div class="editorial-circle">TL</div><span>LESS, BUT<br>EXCEPTIONAL.</span></div>
+      <div class="editorial-copy"><p class="eyebrow">THE THEODORE POINT OF VIEW</p><h2>Luxury is a feeling.<br><em>Make it yours.</em></h2><p>From everyday essentials to statement pieces, THEODORE LUXE brings together style, technology and thoughtful design in one destination.</p><a href="#shop" class="text-link">FIND YOUR NEXT FAVOURITE ↗</a></div>
     </section>
-    <section class="products-section gadget-section" id="gadget-products">
-      <div class="products-heading"><div><p class="eyebrow">02 — THE MODERN ESSENTIALS</p><h2>Gadgets</h2></div><p>Thoughtful technology for a life in motion.</p></div>
-      <div class="product-grid" id="gadget-grid"></div>
-    </section>
-    <section class="story-section" id="story">
-      <div class="story-image"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1200&q=85" alt="Sunglasses and accessories arranged editorially"></div>
-      <div class="story-copy"><p class="eyebrow">THE BULGARY POINT OF VIEW</p><h2>Luxury is a feeling.<br><em>Not a label.</em></h2><p>We believe the objects you choose should feel personal, perform beautifully, and earn their place in your everyday rituals.</p><a href="#collections" class="text-link">Find your signature piece ↗</a></div>
-    </section>
-    <section class="benefits" id="benefits">
-      <div><span>✧</span><h3>Considered selection</h3><p>Pieces chosen for design and function.</p></div>
-      <div><span>◇</span><h3>Thoughtful delivery</h3><p>Carefully packed, ready to gift.</p></div>
-      <div><span>◉</span><h3>Super Coin rewards</h3><p>Extra privileges on qualifying orders.</p></div>
+
+    <section class="newsletter">
+      <p class="eyebrow">A LITTLE NOTE FROM US</p><h2>Good things, delivered.</h2><p>Join our list for new arrivals, edits and special offers.</p>
+      <form id="newsletterForm"><input type="email" placeholder="Your email address" required><button class="btn btn-dark">JOIN THE LIST ↗</button></form>
+      <small id="newsletterMessage" aria-live="polite"></small>
     </section>
   </main>
-  <footer class="site-footer"><a class="wordmark" href="#"><span class="brand-symbol">B</span><span>BULGARY <small>COLLECTIONS</small></span></a><p>Objects of desire. Made for your everyday.</p><span>© <span id="year"></span> Bulgary Collections</span></footer>
-  <div id="cart-panel" class="side-panel" aria-hidden="true">
-    <div class="panel-backdrop" data-close-cart></div>
-    <aside class="panel-content" aria-label="Shopping bag">
-      <div class="panel-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag</h2></div><button class="icon-button" data-close-cart aria-label="Close cart">×</button></div>
-      <div id="cart-items" class="cart-items"></div>
-      <div id="cart-summary" class="cart-summary"></div>
-      <button id="checkout-button" class="button button-gold full-width">Continue to checkout ↗</button>
-      <p class="fine-print">Taxes and delivery are confirmed at checkout.</p>
-    </aside>
-  </div>
-  <div id="checkout-modal" class="modal" aria-hidden="true">
-    <div class="modal-backdrop" data-close-checkout></div>
-    <section class="checkout-card" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
-      <div class="panel-heading"><div><p class="eyebrow">A REFINED CHECKOUT</p><h2 id="checkout-title">Complete your order</h2></div><button class="icon-button" data-close-checkout aria-label="Close checkout">×</button></div>
-      <div class="checkout-layout">
-        <form id="checkout-form" class="checkout-form">
-          <h3>Delivery details</h3>
-          <div class="field-row"><label>Full name<input name="name" autocomplete="name" required minlength="2" placeholder="Your full name"></label><label>Mobile number<input name="phone" inputmode="tel" autocomplete="tel" required pattern="[0-9 +()-]{8,16}" placeholder="+91"></label></div>
-          <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
-          <label>Address<input name="address" autocomplete="street-address" required placeholder="House / street / area"></label>
-          <div class="field-row"><label>City<input name="city" autocomplete="address-level2" required></label><label>PIN code<input name="pincode" inputmode="numeric" pattern="[0-9]{6}" autocomplete="postal-code" required placeholder="6 digits"></label></div>
-          <h3 class="payment-title">Payment method</h3>
-          <label class="payment-option"><input type="radio" name="payment" value="upi" checked><span><strong>UPI</strong><small>Google Pay, PhonePe, BHIM and other UPI apps</small></span><span>↗</span></label>
-          <label class="payment-option"><input type="radio" name="payment" value="card"><span><strong>Credit / debit card</strong><small>Secure payment through payment partner</small></span><span>▤</span></label>
-          <label class="payment-option"><input type="radio" name="payment" value="netbanking"><span><strong>Net banking</strong><small>Participating banks</small></span><span>⌂</span></label>
-          <label class="payment-option"><input type="radio" name="payment" value="cod"><span><strong>Cash on delivery</strong><small>Availability depends on delivery PIN code</small></span><span>₹</span></label>
-          <div id="upi-info" class="upi-info"><strong>UPI payment</strong><p>You will be redirected to a secure payment partner when live payments are configured. Never share your UPI PIN on this website.</p></div>
-          <div class="coins-box"><div><strong>Super Coin privilege</strong><p id="coin-message">Orders above ₹2,000 qualify for the demo reward.</p></div><label class="coin-toggle"><input type="checkbox" id="redeem-coins"><span>Redeem coins</span></label></div>
-          <button class="button button-gold full-width" type="submit" id="place-order">Place demo order <span>↗</span></button>
-          <p class="fine-print">Demo only: this form does not collect payment or create a real order.</p>
-        </form>
-        <aside class="order-summary"><h3>Order summary</h3><div id="checkout-items"></div><div id="checkout-totals"></div></aside>
-      </div>
-      <div id="order-message" class="order-message" role="status" aria-live="polite"></div>
-    </section>
-  </div>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
-  <script src="script.js"></script>
+
+  <footer id="contact">
+    <div class="footer-main"><div><a class="brand footer-brand" href="#"><span>THEODORE</span><small>L U X E</small></a><p>Luxury, made part of every day.</p></div><div><strong>EXPLORE</strong><a href="#shop">Shop all</a><a href="#categories">Categories</a><a href="#story">Our story</a></div><div><strong>NEED HELP?</strong><a href="mailto:hello@theodoreluxe.example">Email support</a><a id="whatsappLink" href="#" target="_blank" rel="noopener">WhatsApp support</a><button class="footer-admin" id="adminBtn">Admin dashboard</button></div></div>
+    <div class="footer-bottom"><span>© 2026 THEODORE LUXE. DEMO STORE.</span><span>MADE FOR MODERN LIVING.</span></div>
+  </footer>
+
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="drawer hidden" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head"><h2>Your bag <span id="drawerCount">(0)</span></h2><button class="close-btn" data-close>×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="coupon-row"><input id="couponInput" placeholder="Coupon code"><button id="applyCoupon" class="btn btn-outline">APPLY</button></div>
+    <p id="couponMessage" class="tiny-message"></p>
+    <div class="cart-summary"><div><span>Subtotal</span><strong id="subtotal">₹0</strong></div><div><span>Discount</span><strong id="discount">−₹0</strong></div><div><span>Shipping</span><strong id="shipping">₹0</strong></div><div class="total"><span>Total</span><strong id="total">₹0</strong></div></div>
+    <button class="btn btn-gold full" id="checkoutBtn">PROCEED TO CHECKOUT ↗</button>
+  </aside>
+
+  <section class="modal hidden" id="accountModal" role="dialog" aria-modal="true">
+    <button class="close-btn modal-close" data-close>×</button><p class="eyebrow">WELCOME TO THEODORE</p><h2 id="accountTitle">Your account</h2>
+    <div class="tabs"><button class="active" id="loginTab">LOGIN</button><button id="registerTab">REGISTER</button></div>
+    <form id="accountForm"><input id="accountName" class="hidden" placeholder="Full name"><input id="accountEmail" type="email" placeholder="Email address" required><input id="accountPassword" type="password" placeholder="Password (min. 6 characters)" minlength="6" required><button class="btn btn-dark full" id="accountSubmit">LOGIN</button></form>
+    <p id="accountMessage" class="tiny-message"></p><button id="logoutBtn" class="text-link hidden">LOG OUT</button>
+    <p class="demo-note">Demo only: account information stays in this browser. Do not use a real password.</p>
+  </section>
+
+  <section class="modal wide-modal hidden" id="checkoutModal" role="dialog" aria-modal="true">
+    <button class="close-btn modal-close" data-close>×</button><p class="eyebrow">ALMOST YOURS</p><h2>Checkout</h2>
+    <form id="checkoutForm" class="checkout-grid">
+      <div class="checkout-fields"><h3>Delivery details</h3><input id="customerName" placeholder="Full name" required><input id="customerEmail" type="email" placeholder="Email address" required><input id="customerPhone" type="tel" placeholder="Mobile number" pattern="[0-9]{10}" title="Enter a 10-digit mobile number" required><textarea id="customerAddress" placeholder="Full delivery address" required></textarea><div class="two-inputs"><input id="customerCity" placeholder="City" required><input id="customerPin" inputmode="numeric" placeholder="PIN code" pattern="[0-9]{6}" required></div><h3>Payment method</h3><label class="payment-option"><input type="radio" name="payment" value="UPI" checked> UPI (demo)</label><label class="payment-option"><input type="radio" name="payment" value="Card"> Credit / debit card (demo)</label><label class="payment-option"><input type="radio" name="payment" value="COD"> Cash on delivery</label><p class="demo-note">No money is collected. This checkout creates a local demo order only.</p></div>
+      <div class="checkout-summary"><h3>Order summary</h3><div id="checkoutLines"></div><div class="total checkout-total"><span>Total</span><strong id="checkoutTotal">₹0</strong></div><button class="btn btn-gold full" type="submit">PLACE DEMO ORDER ↗</button></div>
+    </form>
+    <p id="checkoutMessage" class="tiny-message"></p>
+  </section>
+
+  <section class="modal wide-modal hidden" id="adminModal" role="dialog" aria-modal="true">
+    <button class="close-btn modal-close" data-close>×</button><p class="eyebrow">STORE MANAGEMENT</p><h2>Admin dashboard</h2>
+    <div id="adminLoginPanel"><p class="muted">Sign in to manage your demo store.</p><form id="adminLoginForm" class="admin-login"><input id="adminUser" placeholder="Username" required><input id="adminPass" type="password" placeholder="Password" required><button class="btn btn-dark">ADMIN LOGIN</button></form><p class="demo-note">Demo credentials: admin / Luxe@2026</p><p id="adminLoginMessage" class="tiny-message"></p></div>
+    <div id="adminPanel" class="hidden">
+      <div class="admin-stats" id="adminStats"></div>
+      <div class="admin-tabs"><button class="active" data-admin-tab="products">PRODUCTS</button><button data-admin-tab="orders">ORDERS</button><button data-admin-tab="coupons">COUPONS</button><button data-admin-tab="users">USERS</button></div>
+      <div id="adminContent"></div><button class="btn btn-outline" id="adminLogout">LOG OUT OF ADMIN</button>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
 </body>
 </html>
